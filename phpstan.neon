@@ -1,0 +1,12 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+parameters:
+    level: max
+    paths:
+        - app
+        - tests
+    ignoreErrors:
+        - '#Parameter \#1 \$user of method App\\Http\\Controllers\\SampleController::userOperation\(\) expects App\\User, mixed given#'
+
+        # 正規表現も使用可能
+        # - '#Parameter \#1 \$[a-z]{1}[a-zA-Z0-9_]+ of method App\\Http\\Controllers\\SampleController::userOperation\(\) expects App\\User, mixed given#'
